@@ -1,0 +1,12 @@
+<h2>Characters</h2>
+<div class="row">
+  <div class="col-md-4 bg-light">Character Name</div>
+  <div class="col-md-4 bg-light">Profession</div>
+  <div class="col-md-2 bg-light">Level</div>
+  <div class="col-md-2 bg-light">Race</div>
+</div>
+<app-character-summary
+  *ngFor="let character of characterList; let i = index"
+  [characterSummary]="character"
+  [index]="i">
+</app-character-summary>

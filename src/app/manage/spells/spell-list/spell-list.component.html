@@ -1,0 +1,13 @@
+<h2>Spells</h2>
+<div class="spell-list">
+  <div class="row">
+    <div class="col-5 bg-light">Spell Name</div>
+    <div class="col-3 bg-light">Profession</div>
+    <div class="col-2 bg-light">Level</div>
+    <div class="col-2 bg-light"></div>
+  </div>
+  <app-spell-summary
+    *ngFor="let spell of spellList; let i = index;"
+    [spell]="spell"
+    [index]="i"></app-spell-summary>
+</div>

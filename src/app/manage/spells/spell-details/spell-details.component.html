@@ -1,0 +1,99 @@
+<form [formGroup]="spellDetailFrom" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="col-2">
+      <label for="name">Name</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="name" formControlName="name" class="form-control" placeholder="Name">
+    </div>
+    <div class="col-2">
+      <label for="level">Level</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="level" formControlName="level" class="form-control" placeholder="Level">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-2">
+      <label for="school">School</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="school" formControlName="school" class="form-control" placeholder="School">
+    </div>
+    <div class="col-2">
+      <label for="reversible">Reversible</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="reversible" formControlName="reversible" class="form-control" placeholder="Reversible">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-2">
+      <label for="sphere">Sphere</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="sphere" formControlName="sphere" class="form-control" placeholder="Sphere">
+    </div>
+    <div class="col-2">
+      <label for="profession">Profession</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="profession" formControlName="profession" class="form-control" placeholder="Casting Profession">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-2">
+      <label for="range">Range</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="range" formControlName="range" class="form-control" placeholder="Range">
+    </div>
+    <div class="col-2">
+      <label for="castingTime">Casting Time</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="castingTime" formControlName="castingTime" class="form-control" placeholder="Casting Time">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-2">
+      <label for="area">Area</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="area" formControlName="area" class="form-control" placeholder="Area">
+    </div>
+    <div class="col-2">
+      <label for="duration">Duration</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="duration" formControlName="duration" class="form-control" placeholder="Duration">
+    </div>
+</div>
+  <div class="form-row">
+    <div class="col-2">
+      <label for="savingThrow">Saving Throw</label>
+    </div>
+    <div class="col-4">
+      <input type="text" id="savingThrow" formControlName="savingThrow" class="form-control" placeholder="Saving Throw">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-2">
+      <label for="description">Description</label>
+    </div>
+    <div class="col">
+      <textarea rows="5" id="description" formControlName="description" class="form-control" placeholder="Description"></textarea>
+    </div>
+  </div>
+  <p></p>
+  <div class="form-row">
+    <div class="col-2">
+    <button type="submit" class="btn btn-primary" [disabled]="!spellDetailFrom.valid">Save</button>
+    </div>
+    <div class="col-2">
+    <button type="button" class="btn btn-primary" (click)="onReset()">Reset</button>
+    </div>
+  </div>
+
+
+</form>

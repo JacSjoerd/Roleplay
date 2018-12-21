@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col-md-4">
+    <form [formGroup]="characterForm" (ngSubmit)="onSubmitCharacter()">
+      <h2>Character Details</h2>
+      <div class="form-row">
+        <div class="col">
+          <label for="name">Name</label>
+        </div>
+        <div class="col">
+          <input type="text" id="name" formControlName="name" class="form-control" placeholder="Name" (change)="saveCharacter()">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="alias">Alias</label>
+        </div>
+        <div class="col">
+          <input type="text" id="alias" formControlName="alias" class="form-control" placeholder="Alias" (change)="saveCharacter()">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="race">Race</label>
+        </div>
+        <div class="col">
+          <input type="text" id="race" formControlName="race" class="form-control" placeholder="Race" (change)="saveCharacter()">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="profession">Profession</label>
+        </div>
+        <div class="col">
+          <input type="text" id="profession" formControlName="profession" class="form-control" placeholder="Profession" (change)="saveCharacter()">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="gender">Gender</label>
+        </div>
+        <div class="col">
+          <input type="text" id="gender" formControlName="gender" class="form-control" placeholder="Gender" (change)="saveCharacter()">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="alignment">Alignment</label>
+        </div>
+        <div class="col">
+          <input type="text" id="alignment" formControlName="alignment" class="form-control" placeholder="Alignment" (change)="saveCharacter()">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="level">Level</label>
+        </div>
+        <div class="col">
+          <input type="number" id="level" formControlName="level" class="form-control text-right" placeholder="Level" (change)="saveCharacter()">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-6">
+          <label for="hitpoints">Hitpoints (act/max)</label><br>
+        </div>
+        <div class="col">
+          <input type="number" id="hitpoints" formControlName="actualHitpoints" class="form-control text-right" placeholder="Act" (change)="saveCharacter()">
+        </div>
+        <div class="col">
+          <input type="number" id="hitpoints" formControlName="maxHitpoints" class="form-control text-right" placeholder="Max" (change)="saveCharacter()">
+        </div>
+      </div>
+    </form>
+    <hr>
+    <app-character-abilities></app-character-abilities>
+    <hr>
+    <button class="btn btn-primary" routerLink="/character/{{ characterId }}/notes">Notes</button>
+    &nbsp;
+    <button class="btn btn-primary" routerLink="/character/{{ characterId }}/skills">Skills</button>
+    &nbsp;
+    <button class="btn btn-primary" routerLink="/character/{{ characterId }}/spells">Spells</button>
+  </div>
+  <div class="col-md-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>

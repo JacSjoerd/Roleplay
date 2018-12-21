@@ -1,0 +1,100 @@
+<form [formGroup]="abilityForm" (ngSubmit)="onSubmitAbilities()">
+  <div class="form-row bg-light">
+    <div class="col-4">
+      <label>Ability</label>
+    </div>
+    <div class="col-3">
+      <label>Base</label>
+    </div>
+    <div class="col-3">
+      <label>Temp</label>
+    </div>
+    <div class="col-2">
+      <label>Total</label>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-4">
+      <label for="strength">Strength</label>
+    </div>
+    <div class="col-3">
+      <input type="text" id="strength" formControlName="strengthBase" class="form-control text-right" placeholder="Base" (change)="updateAbilities()">
+    </div>
+    <div class="col-3">
+      <input type="text" id="strength" formControlName="strengthTemp" class="form-control text-right" placeholder="Temp" (change)="updateAbilities()">
+    </div>
+    <div class="col-2">
+      <input type="text" id="strength" class="form-control text-right" value="{{ strengthTotal }}" disabled>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-4">
+      <label for="dexterity">Dexterity</label>
+    </div>
+    <div class="col-3">
+      <input type="text" id="dexterity" formControlName="dexterityBase" class="form-control text-right" placeholder="Base" (change)="updateAbilities()">
+    </div>
+    <div class="col-3">
+      <input type="text" id="dexterity" formControlName="dexterityTemp" class="form-control text-right" placeholder="Temp" (change)="updateAbilities()">
+    </div>
+    <div class="col-2">
+      <input type="text" id="dexterity" class="form-control text-right" value="{{ dexterityTotal }}" disabled>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-4">
+      <label for="constitution">Constitution</label>
+    </div>
+    <div class="col-3">
+      <input type="text" id="constitution" formControlName="constitutionBase" class="form-control text-right" placeholder="Base" (change)="updateAbilities()">
+    </div>
+    <div class="col-3">
+      <input type="text" id="constitution" formControlName="constitutionTemp" class="form-control text-right" placeholder="Temp" (change)="updateAbilities()">
+    </div>
+    <div class="col-2">
+      <input type="text" id="constitution" class="form-control text-right" value="{{ constitutionTotal }}" disabled>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-4">
+      <label for="intelligence">Intelligence</label>
+    </div>
+    <div class="col-3">
+      <input type="text" id="intelligence" formControlName="intelligenceBase" class="form-control text-right" placeholder="Base" (change)="updateAbilities()">
+    </div>
+    <div class="col-3">
+      <input type="text" id="intelligence" formControlName="intelligenceTemp" class="form-control text-right" placeholder="Temp" (change)="updateAbilities()">
+    </div>
+    <div class="col-2">
+      <input type="text" id="intelligence" class="form-control text-right" value="{{ intelligenceTotal }}" disabled>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-4">
+      <label for="wisdom">Wisdom</label>
+    </div>
+    <div class="col-3">
+      <input type="text" id="wisdom" formControlName="wisdomBase" class="form-control text-right" placeholder="Base" (change)="updateAbilities()">
+    </div>
+    <div class="col-3">
+      <input type="text" id="wisdom" formControlName="wisdomTemp" class="form-control text-right" placeholder="Temp" (change)="updateAbilities()">
+    </div>
+    <div class="col-2">
+      <input type="text" id="wisdom" class="form-control text-right" value="{{ wisdomTotal }}" disabled>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-4">
+      <label for="charisma">Charisma</label>
+    </div>
+    <div class="col-3">
+      <input type="text" id="charisma" formControlName="charismaBase" class="form-control text-right" placeholder="Base" (change)="updateAbilities()">
+    </div>
+    <div class="col-3">
+      <input type="text" id="charisma" formControlName="charismaTemp" class="form-control text-right" placeholder="Temp" (change)="updateAbilities()">
+    </div>
+    <div class="col-2">
+      <input type="text" id="charisma" class="form-control text-right" value="{{ charismaTotal }}" disabled>
+    </div>
+  </div>
+</form>
